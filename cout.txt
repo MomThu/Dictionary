@@ -1,3 +1,0 @@
-﻿house : ngôi nhà
-young : trẻ
-old : già

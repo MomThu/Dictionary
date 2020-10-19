@@ -1,0 +1,19 @@
+.text_field {
+    -fx-background-color: #FAD0C3;
+    -fx-text-fill: #fff;
+}
+.text_area {
+    -fx-background-color: pink;
+    -fx-text-fill: pink;
+    -fx-font-size: 15px;
+}
+.search {
+    -fx-background-color: #778188;
+    -fx-text-fill: pink;
+}
+.audio {
+    -fx-background-color: #778188;
+    -fx-text-fill: pink;
+}
+
+

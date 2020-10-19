@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+              <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css">
+                  <children>
+                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="478.0">
+                          <children>
+                              <TextField fx:id="text" maxHeight="30.0" maxWidth="200.0" minWidth="-Infinity" onAction="#textFieldOnAction" onKeyPressed="#OnKeyPress" prefHeight="20.0" prefWidth="200.0" promptText="Tra từ Anh Việt " styleClass="text_field" stylesheets="@application.css">
+                                  <padding>
+                                      <Insets left="10.0" />
+                                  </padding>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#Search" styleClass="search" stylesheets="@application.css" text="Search">
+                                  <HBox.margin>
+                                      <Insets left="5.0" />
+                                  </HBox.margin>
+                              </Button>
+                        <Button mnemonicParsing="false" onAction="#Audio" styleClass="audio" stylesheets="@application.css" text="Audio">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></Button>
+                          </children>
+                          <VBox.margin>
+                              <Insets left="50.0" />
+                          </VBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                      </HBox>
+                  <WebView fx:id="webView" minHeight="300.0" prefHeight="200.0" prefWidth="400.0" />
+                  </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+              </VBox>
+            <VBox maxHeight="200.0" maxWidth="270.0" minWidth="10.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listView" onMouseClicked="#OnclickListView" prefHeight="200.0" prefWidth="278.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <StackPane.margin>
+                  <Insets bottom="85.0" left="92.0" right="110.0" />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

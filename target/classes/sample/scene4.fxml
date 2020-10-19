@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+              <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css">
+                  <children>
+                      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="601.0">
+                          <children>
+                              <TextField fx:id="text" maxHeight="30.0" maxWidth="200.0" minWidth="-Infinity" onAction="#textFieldOnAction" onKeyPressed="#OnKeyPress" prefHeight="20.0" prefWidth="200.0" promptText="Tra từ Anh Việt " styleClass="text_field" stylesheets="@application.css">
+                                  <padding>
+                                      <Insets left="10.0" />
+                                  </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#Search" styleClass="search" stylesheets="@application.css" text="Search">
+                                  <HBox.margin>
+                                      <Insets left="5.0" right="190.0" />
+                                  </HBox.margin>
+                              </Button>
+                        <MenuBar maxWidth="144.0" prefHeight="28.0" prefWidth="130.0">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="Add/Edit/Remove">
+                              <items>
+                                <MenuItem mnemonicParsing="false" onAction="#AddNewWord" text="Add" />
+                                    <MenuItem mnemonicParsing="false" onAction="#RemoveWord" text="Remove" />
+                                    <MenuItem mnemonicParsing="false" onAction="#EditWord" text="Edit" />
+                              </items>
+                            </Menu>
+                          </menus>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </MenuBar>
+                          </children>
+                          <VBox.margin>
+                              <Insets />
+                          </VBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                      </HBox>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="340.0" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0">
+                     <children>
+                        <WebView fx:id="webView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0">
+                           <StackPane.margin>
+                              <Insets right="310.0" />
+                           </StackPane.margin>
+                        </WebView>
+                        <TextArea fx:id="text2">
+                           <StackPane.margin>
+                              <Insets left="300.0" />
+                           </StackPane.margin>
+                        </TextArea>
+                     </children>
+                  </StackPane>
+                  </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+              </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="270.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="270.0">
+               <children>
+                  <ListView fx:id="listView" onMouseClicked="#OnclickListView" prefHeight="310.0" prefWidth="278.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <StackPane.margin>
+                  <Insets right="320.0" top="40.0" />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

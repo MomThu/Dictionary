@@ -1,3 +1,9 @@
 ﻿house	ngôi nhà
-young	trẻ
-old	già
+mouse	chuột
+water	nước
+hot	nóng
+cold	lạnh
+dog	chó
+cat	mèo
+chicken	gà
+duck	vịt

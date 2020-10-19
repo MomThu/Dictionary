@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@tab1.css" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="200.0" tabMinHeight="35.0" tabMinWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Dictionary">
+      <content>
+          <fx:include source="scene1.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Translate">
+            <content>
+                <fx:include source="scene2.fxml" />
+            </content>
+    </Tab>
+      <Tab text="My vocab">
+      <content>
+          <fx:include source="scene3.fxml" />
+      </content>
+      </Tab>
+      <Tab text="Any Change">
+        <content>
+          <fx:include source="scene4.fxml" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

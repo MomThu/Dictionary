@@ -1,3 +1,16 @@
 .title {
-    
+    -fx-font-weight: bold;
+    -fx-text-fill: #778188;
+    -fx-font-size: 24px;
 }
+.envi {
+    -fx-background-color: #778188;
+    -fx-text-fill: pink;
+    -fx-padding: 5px 20px;
+    -fx-font-weight: bold;
+}
+.envi:focused {
+    -fx-background-color: pink;
+    -fx-text-fill: #778188;
+}
+

@@ -64,12 +64,23 @@ public class Controller {
     //button search trong scene1 & scene4
     @FXML
     public void Search (ActionEvent event) {
-
-    String Text = text.getText();
-        //String vietnam = Main.dc.dictionaryLookup(Text);
+        String Text = text.getText();
         WebEngine webEngine = webView.getEngine();
         webEngine.loadContent(Main.dc.dictionaryLookup(Text), "text/html");
+        webEngine.setUserStyleSheetLocation(getClass().getResource("webview.css").toString());
         listView.setVisible(false);
+    }
+
+    @FXML
+    public void AddToVocabulary(ActionEvent event) {
+        String eng = text.getText();
+        String vie = Main.dc.dictionaryLookup(eng);
+        if(Controller3.isExist(eng) == false) {
+            myVocabulary.addToMyVocab(eng, vie);
+            Controller3.addVocabFromDb();
+        } else {
+            System.out.println("This word exists.");
+        }
     }
 
     //action click vào listView để hiện ra nghĩa từ
@@ -79,22 +90,31 @@ public class Controller {
         String Text = text.getText();
         WebEngine webEngine = webView.getEngine();
         webEngine.loadContent(Main.dc.dictionaryLookup(Text), "text/html");
+        webEngine.setUserStyleSheetLocation(getClass().getResource("webview.css").toString());
         listView.setVisible(false);
     }
 
     //action thêm từ
     public void AddNewWord(ActionEvent event) {
         String word = text.getText();
-        String explain = text2.getText();
-        Main.dc.addNewWord(word, explain);
-        Main.dc.addNewWordToDb(word, explain);
+        if(Main.dc.dictionaryLookup(word).equals("Not found")) {
+            String explain = text2.getText();
+            Main.dc.addNewWord(word, explain);
+            Main.dc.addNewWordToDb(word, explain);
+        } else {
+            System.out.println("Add failed. This word exists.");
+        }
     }
 
     //action xóa từ
     public void RemoveWord(ActionEvent event) {
         String word = text.getText();
-        Main.dc.deleteWord(word);
-        Main.dc.deleteWordFromDb(word);
+        if(Main.dc.dictionaryLookup(word).equals("Not found")) {
+            System.out.println("This word isn't exist. Can't delete this word.");
+        } else {
+            Main.dc.deleteWord(word);
+            Main.dc.deleteWordFromDb(word);
+        }
     }
 
     //action sửa từ
@@ -109,6 +129,11 @@ public class Controller {
     public void Audio(ActionEvent event) {
         String word = text.getText();
         textToSpeech.speech(word);
+    }
+
+    public void apiSpeech(ActionEvent event) {
+        String word = text.getText();
+        api_speech.textToSpeechApi("en-GB", "en-GB-Susan", word);
     }
 
     //action ấn down/up trên listview
@@ -128,6 +153,7 @@ public class Controller {
         String Text = text.getText();
         WebEngine webEngine = webView.getEngine();
         webEngine.loadContent(Main.dc.dictionaryLookup(Text), "text/html");
+        webEngine.setUserStyleSheetLocation(getClass().getResource("webview.css").toString());
         listView.setVisible(false);
     }
 
@@ -135,7 +161,6 @@ public class Controller {
     public void initialize() {
         listView.setVisible(false);
         listView.setItems(list);
-        //vietnamese.setEditable(false);
         text.textProperty().addListener((observable, oldValue, newValue) -> {
             if(!newValue.isEmpty()) {
                 loadPre(newValue);

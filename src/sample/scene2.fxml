@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -8,33 +9,33 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="border-pane" stylesheets="@Scene2.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
    <top>
       <HBox prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="54.0" prefWidth="655.0" text="Dịch văn bản" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="54.0" prefWidth="655.0" styleClass="title" stylesheets="@Scene2.css" text="Dịch văn bản" textAlignment="CENTER">
                <font>
-                  <Font size="20.0" />
+                  <Font size="24.0" />
                </font>
             </Label>
          </children>
       </HBox>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@Scene2.css" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="128.0" prefWidth="600.0">
                <children>
                   <TextArea fx:id="textField1" prefHeight="90.0" prefWidth="600.0" />
                </children>
             </HBox>
-            <HBox prefHeight="62.0" prefWidth="600.0">
+            <HBox prefHeight="47.0" prefWidth="600.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#translate_api1" text="En-Vi">
+                  <Button mnemonicParsing="false" onAction="#translate_api1" styleClass="envi" stylesheets="@Scene2.css" text="En-Vi">
                      <HBox.margin>
-                        <Insets bottom="10.0" left="240.0" right="10.0" top="10.0" />
+                        <Insets bottom="10.0" left="220.0" right="10.0" top="10.0" />
                      </HBox.margin></Button>
-                  <Button mnemonicParsing="false" onAction="#translate_api2" text="Vi-En">
+                  <Button mnemonicParsing="false" onAction="#translate_api2" styleClass="envi" stylesheets="@Scene2.css" text="Vi-En">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin></Button>
@@ -42,7 +43,7 @@
             </HBox>
             <HBox prefHeight="137.0" prefWidth="600.0">
                <children>
-                  <TextArea fx:id="textField2" prefHeight="123.0" prefWidth="600.0" />
+                  <TextArea fx:id="textField2" prefHeight="147.0" prefWidth="600.0" />
                </children>
             </HBox>
          </children>

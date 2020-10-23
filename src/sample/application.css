@@ -15,5 +15,32 @@
     -fx-background-color: #778188;
     -fx-text-fill: pink;
 }
+.addVocab {
+    -fx-background-color: #778188;
+    -fx-text-fill: pink;
+}
+.menu-bar {
+    -fx-background-color: #778188;
+    -fx-background-radius: 5px;
+}
+.menu-bar .label {
+    -fx-text-fill: pink;
+}
+.menu-item .label {
+    -fx-text-fill: #778188;
+}
+.menu-item {
+    -fx-background-color: pink;
+}
+.menu-item:focused {
+    -fx-background-color: #778188;
+}
+.menu-item:focused .label {
+    -fx-text-fill: pink;
+}
+
+
+
+
 
 

@@ -1,6 +1,8 @@
 # Dictionary
 * Bài tập lớn OOP của Nguyễn Thị Thư (19020449).
 * Project viết bằng java trên IntelliJ, sử dụng jdk8.
+* Sử dụng database hơn 100.000 từ.
+* Sử dụng API Speech và API Translator của Microsoft Azure.
 # Run Project
 * Tải về và giải nén, mở bằng IntelliJ.
 * Chuột phải vào thư mục src -> Mark Directory as -> Sources Root.
